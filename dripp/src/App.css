@@ -1,0 +1,28 @@
+.App {
+  display: grid;
+  grid-template-rows: 70px auto 50px;
+}
+
+header {
+  grid-row: 1 / 2;
+  position: fixed;
+  top: 0;
+  background-color: rgb(165, 158, 158);
+  width: 100%;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+footer {
+  grid-row: 3 / 4;
+  position: fixed;
+  bottom: 0;
+  background-color: rgb(165, 158, 158);
+  width: 100%;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.home {
+  grid-row: 2 / 3;
+}
