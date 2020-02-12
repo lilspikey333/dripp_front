@@ -1,4 +1,3 @@
-import React from "react";
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
@@ -9,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Item_List from "./components/Item_List";
 
 function App() {
-  const url = "http://localhost:8000";
+  const url = "http://localhost:8000/items/";
   const [data, setData] = useState({ data: [] });
 
   function newData(res) {
@@ -22,7 +21,9 @@ function App() {
       .then(res => newData(res));
   }
 
-
+  useEffect(() => {
+    fetchData();
+  });
 
   return (
     <div className="App">
