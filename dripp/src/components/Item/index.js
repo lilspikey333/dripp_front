@@ -2,8 +2,8 @@ import React from "react";
 
 function Item(props) {
   return (
-    <div class="item">
-      <p>{props.category}</p>
+    <div className="item">
+      <div className="title">{props.item.category}</div>
     </div>
   );
 }

@@ -30,3 +30,8 @@ footer {
 .item_list {
   grid-row: 2 / 3;
 }
+
+.title {
+  margin-top: 70px;
+  grid-row: 2 / 3;
+}

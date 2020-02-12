@@ -3,7 +3,7 @@ import Item from "../Item";
 
 function Item_List(props) {
   return (
-    <div className="MovieResults">
+    <div className="ItemResults">
       {props.items.map(item => {
         return <Item item={item} />;
       })}
