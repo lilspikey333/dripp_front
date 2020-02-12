@@ -1,13 +1,10 @@
-import React from 'react'
-
+import React from "react";
 
 function Home(props) {
-    return (
-        <section class="login=form">
-            <form>
-                <input ></input>
-            </form>
-        </section>
-    )
+  return (
+    <div>
+        This is the homepage
+    </div>
+  );
 }
-export default Home
+export default Home;
