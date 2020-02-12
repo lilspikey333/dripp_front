@@ -3,8 +3,10 @@ import Item from "../Item";
 
 function Item_List(props) {
   return (
-    <div class="item_list">
-      <Item />
+    <div className="MovieResults">
+      {props.items.map(item => {
+        return <Item item={item} />;
+      })}
     </div>
   );
 }

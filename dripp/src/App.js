@@ -9,17 +9,18 @@ import Item_List from "./components/Item_List";
 
 function App() {
   const url = "http://localhost:8000/items/";
-  const [data, setData] = useState({ data: [] });
+  const [data, setData] = useState([]);
 
-  function newData(res) {
-    setData({ data: res });
-  }
-
-  function fetchData() {
+  const fetchData = () => {
     fetch(url)
-      .then(results => results.json())
-      .then(res => newData(res));
-  }
+      .then(res => res.json())
+      .then(res => {
+        setData(res);
+      }, [])
+      .catch(error => {
+        console.log("error", error);
+      });
+  };
 
   useEffect(() => {
     fetchData();
@@ -30,7 +31,10 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/items" component={Item_List} />
+        <Route
+          path="/items"
+          render={props => <Item_List {...props} items={data} />}
+        />
       </Switch>
       <Footer />
     </div>
