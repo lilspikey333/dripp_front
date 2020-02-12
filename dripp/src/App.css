@@ -26,3 +26,7 @@ footer {
 .home {
   grid-row: 2 / 3;
 }
+
+.item_list {
+  grid-row: 2 / 3;
+}
